@@ -1,0 +1,606 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+  /* Primary Colors */
+  --color-background: #0F0F0F;
+  --color-white: #FFFFFF;
+  --color-green: #3EF172;
+
+  /* Accent Colors */
+  --color-green-gradient-start: #2DEC6E;
+  --color-green-gradient-end: #1CBF60;
+  --color-text-light: #B0B0B0;
+
+  /* Additional */
+  --color-dark-blue: #10111A; 
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body{
+    background: var(--color-background);
+    position: relative;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.light-mode {
+  background-color: #F9FAFB;
+  color: #111827;
+}
+main{
+    width: 80%;
+    margin: 2% auto;
+    color: var(--color-text-light);
+    
+    
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 16px solid var(--color-dark-blue);
+    position: sticky;
+    z-index: 2;
+    top: 0;
+    background: var(--color-background);
+    margin-top: 2%;
+    padding-top: 2%;
+}
+h2{
+    font-weight: 100;
+    font-size: 2rem;
+}
+h2 > span{
+    color: var(--color-green-gradient-end);
+    font-weight: 900;
+}
+.top-nav{
+    width: 50%;
+    margin: 0 auto;
+    padding-left: 10%;
+}
+.top-nav > ul > li{
+    display: inline;
+    position: relative;
+}
+.top-nav ul li::after{
+    content: "";
+    width: 0;
+    height: 2px;
+    background: var(--color-green-gradient-end);
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -0.8rem;
+    margin: 0 auto;
+    transition: width 0.3s ease;
+    cursor: pointer;
+}
+.top-nav  ul li:hover::after{
+    width: 30%;
+    cursor: pointer;
+}
+
+
+.top-nav > ul > li > span > a{
+    text-decoration: none;
+    color: white;
+    padding: 2% 4%;
+}
+
+.active{
+    background: var(--color-green-gradient-end);
+    border-radius: 25px;
+    
+    color: var(--color-background);
+}
+.active:hover{
+    background: var(--color-white);
+    color: var(--color-background);
+}
+.state-change{
+    width: 5%;
+    cursor: pointer;
+}
+.sun{
+    display: none;
+}
+.moon{
+    display: none;
+}
+#home{
+    
+    display: flex;
+    padding: 10%;
+    color: white;
+    
+}
+.description{
+    width: 50%;
+    padding: 10% 0;
+}
+.description > h1{
+    font-size: 2.5rem;
+    padding: 1rem 0;
+}
+.me{
+    font-size: 1.5rem;
+}
+.me > span{
+    color: var(--color-green-gradient-end);
+}
+.slide-text {
+  display: inline-block;
+  transition: transform 2s ease, opacity 2s ease;
+  position: relative;
+}
+
+.slide-out {
+  transform: translateY(-100%);
+  
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.slide-in {
+  transform: translateY(100%);
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+.hamburger{
+    width: 20px;
+    height: 15px;
+    display: none;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  background: var(--color-green-gradient-end);
+  color: var(--color-background);
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+  margin: 10%;
+  
+}
+.cta-button:hover {
+  background: var(--color-white);
+  color: var(--color-background);
+}
+.home-image{
+    width: 50%;
+}
+.home-image > img{
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    animation: bounce 3s ease-in-out infinite
+}
+/* Hamburger Icon */
+
+
+/* Navigation Menu */
+.nav-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  background: var(--color-dark-blue);
+  width: 70%;
+  max-width: 300px;
+  height: 100vh;
+  z-index: 1000;
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+  padding-top: 4rem;
+  box-shadow: -4px 0 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Active class to show the menu */
+.active-menu {
+  transform: translateX(0);
+}
+
+/* Close button */
+.nav-close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  font-size: 2rem;
+  color: var(--color-white);
+  cursor: pointer;
+}
+
+/* Navigation links */
+.nav-menu ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 3rem;
+}
+
+.nav-menu ul li {
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.nav-menu ul li a {
+  color: var(--color-white);
+  text-decoration: none;
+  font-size: 1.6rem;
+  transition: color 0.3s ease;
+}
+
+.nav-menu ul li a:hover {
+  color: var(--color-green-gradient-end); 
+}
+
+@keyframes bounce {
+    0%{
+        transform: translateY(0);
+    }
+    
+    50%{
+        transform: translateY(1.5rem);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+#about{
+    
+    margin: 0 2%;
+    scroll-margin-top: 100px;
+}
+
+#about > div > h2, .tools{
+    color: var(--color-green-gradient-end);
+    padding: 1% 0;
+    text-align: center;
+    font-size: 2rem;
+    
+}
+#about > div > p{
+    width: 100%;
+    line-height: 1.5rem;
+    text-align: center;
+}
+.tools{
+    padding:4% 0;
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 2rem;
+    
+}
+
+/* Container */
+.tools-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 0.8rem;
+}
+
+/* Tool Card */
+.tool {
+  width: 120px;
+  padding: 1rem;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.tool:hover {
+  transform: translateY(-1rem);
+  cursor: pointer;
+}
+
+/* Image */
+.tool img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+}
+
+
+.tool span p {
+  padding: 0.3rem 0.6rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: white;
+  display: inline-block;
+}
+
+
+.tool.html span p {
+  background-color: #f06529;
+}
+.tool.css span p {
+  background-color: #2965f1;
+}
+.tool.js span p {
+  background-color: #f0db4f;
+  color: #323330;
+}
+.tool.react span p {
+  background-color: #61dafb;
+  color: #000;
+}
+.tool.git span p {
+  background-color: #f34f29;
+}
+.tool.django span p {
+  background-color: #092e20;
+}
+.tool.tailwind span p {
+  background-color: #38bdf8;
+  color: #000;
+}
+.tool.arduino span p {
+  background-color: #00979d;
+}
+.tool.python span p {
+  background-color: #306998; 
+}
+
+.tool.bootstrap span p {
+  background-color: #7952b3; 
+}
+#project{
+    margin: 20% 0;
+    scroll-margin-top: 100px; /* adjust this to match your header height */
+}
+#project > h2{
+    margin: 2% 0;
+    color: var(--color-green-gradient-end);
+    text-align: center;
+}
+.project-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.6rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.project-card {
+  background: #1b1b1b;
+  color: white;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 23%;
+  margin-bottom: 2%;
+}
+
+.project-card:hover {
+  transform: translateY(-20px);
+  cursor: pointer;
+}
+
+.project-image {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.project-card h3 {
+  color: var(--color-green-gradient-end);
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.project-card p {
+  font-size: 0.9rem;
+  margin-bottom: 0.6rem;
+  text-align: center;
+}
+
+.project-links a {
+  color: var(--color-green-gradient-end);
+  margin: 0 0.5rem;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.project-links a:hover {
+  text-decoration: underline;
+}
+#contact {
+  margin-top: 4rem;
+  padding: 2rem;
+  background-color: var(--color-dark-blue);
+  border-radius: 12px;
+  text-align: center;
+}
+
+#contact h2 {
+  color: var(--color-green-gradient-end);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.contact-intro {
+  margin-bottom: 2rem;
+  color: var(--color-text-light);
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 0.75rem;
+  border-radius: 8px;
+  border: none;
+  font-size: 1rem;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: 2px solid var(--color-green-gradient-end);
+}
+
+.contact-form button {
+  background-color: var(--color-green-gradient-end);
+  color: var(--color-background);
+  font-weight: bold;
+  border: none;
+  padding: 0.75rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.contact-form button:hover {
+  background-color: var(--color-white);
+  color: var(--color-background);
+}
+.contact-form > p{
+    color: red;
+    align-items: flex-start;
+    text-align: left;
+}
+.social-links {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.social-links a {
+  color: var(--color-green-gradient-end);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: var(--color-white);
+  transform: scale(2.2);
+}
+.success-message{
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: darkgreen;
+    text-align: center;
+    color: var(--color-white);
+    width: 30%;
+    padding: 20px;
+    position: absolute;
+    z-index: 200;
+    margin: 0 auto;
+    transition: transform 0.5s ease-in;
+    transform: translateY(-200%);
+}
+
+@media screen and (max-width: 600px) {
+  main {
+    width: 90%;
+    margin: 5% auto;
+  }
+
+  header {
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+  }
+
+  .top-nav {
+    width: 100%;
+    padding-left: 0;
+    margin-top: 1rem;
+    display: none;
+  }
+
+  .top-nav ul {
+    padding: 0;
+  }
+
+  .top-nav ul li {
+    display: block;
+    margin-bottom: 1rem;
+  }
+
+  .state-change {
+    width: 15%;
+    margin-top: 1rem;
+  }
+  .hamburger{
+    display: block;
+    margin-right: 10%;
+  }
+
+  #home {
+    flex-direction: column;
+    padding: 5%;
+    text-align: center;
+    height: 100vh;
+  }
+
+  .description {
+    width: 100%;
+    padding: 5% 0;
+  }
+
+  .home-image {
+    width: 100%;
+    margin-top: 2rem;
+  }
+
+  .home-image img {
+    width: 250px;
+    height: 250px;
+  }
+
+  .tools-list {
+    display: flex;
+    
+    gap: 1rem;
+  }
+
+  .project-grid {
+    display: flex;
+    gap: 1rem;
+  }
+  .project-card{
+    width: 40%;
+  }
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .submit {
+    width: 100%;
+  }
+
+  .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+}

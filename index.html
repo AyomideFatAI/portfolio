@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <title>Portfolio</title>
+  </head>
+  <body>
+    <main>
+      <div class="success-message">
+        <b
+          ><p>
+            Message sent successfully
+            <span><i class="bx bx-check-circle"></i></span></p
+        ></b>
+      </div>
+      <header>
+        <h2>FAT<span>AI.</span></h2>
+
+        <nav class="top-nav">
+          <ul>
+            <li>
+              <span><a href="#home" class="nav-item">Home</a></span>
+            </li>
+            <li>
+              <span><a href="#about" class="nav-item">About</a></span>
+            </li>
+            <li>
+              <span><a href="#project" class="nav-item">Projects</a></span>
+            </li>
+            <li>
+              <span><a href="#contact" class="nav-item">Contact</a></span>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="state-change">
+            <img class="sun" src="./assets/icon-sun.svg" alt="">
+            <img class="moon" src="./assets/icon-moon.svg" alt="">
+        </div>
+        <img src="./assets/icon-hamburger.svg" class="hamburger" alt="">
+      </header>
+
+      <section id="home">
+        <div class="description">
+          <p>👋 HI, I'm</p>
+          <h1>FATAI AYOMIDE</h1>
+          <p class="me">
+            I'm a
+            <span id="fade-text" class="slide-text">Front-end developer</span>
+          </p>
+          <a href="#contact" class="cta-button">LET'S CONNECT</a>
+        </div>
+        <div class="home-image">
+          <img src="./assets/photo_2025-01-29_17-27-22.jpg" alt="" />
+        </div>
+
+        <div class="nav-menu">
+            <div class="nav-close-btn" id="closeMenu">&times;</div>
+            <ul>
+                <li><a href="#home" onclick="closeMenu()">Home</a></li>
+                <li><a href="#about" onclick="closeMenu()">About</a></li>
+                <li><a href="#project" onclick="closeMenu()">Projects</a></li>
+                <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
+            </ul>
+        </div>
+      </section>
+
+      <section id="about">
+        <div>
+          <h2>About Me</h2>
+          <p>
+            I'm a developer skilled in both front-end and back-end, building
+            websites that look great and perform flawlessly. As a prompt
+            engineer, I craft clear instructions to help AI deliver the best
+            results. With a background in computer engineering, I combine
+            hardware knowledge with software expertise to create effective tech
+            solutions.
+          </p>
+        </div>
+        <h2 class="tools">Tech Stack and Tools</h2>
+
+        <div class="tools-list">
+          <div class="tool html">
+            <img src="./assets/HTML.png" alt="HTML" />
+            <span><p>HTML</p></span>
+          </div>
+
+          <div class="tool css">
+            <img src="./assets/CSS.png" alt="CSS" />
+            <span><p>CSS</p></span>
+          </div>
+
+          <div class="tool js">
+            <img src="./assets/JAVASCRIPT.png" alt="JavaScript" />
+            <span><p>JavaScript</p></span>
+          </div>
+
+          <div class="tool react">
+            <img src="./assets/REACT.png" alt="React" />
+            <span><p>React</p></span>
+          </div>
+
+          <div class="tool git">
+            <img src="./assets/GIT.png" alt="Git" />
+            <span><p>Git</p></span>
+          </div>
+
+          <div class="tool django">
+            <img src="./assets/DJANGO.png" alt="Django" />
+            <span><p>Django</p></span>
+          </div>
+
+          <div class="tool tailwind">
+            <img src="./assets/TAILWIND CSS.png" alt="Tailwind CSS" />
+            <span><p>Tailwind</p></span>
+          </div>
+
+          <div class="tool arduino">
+            <img src="./assets/ARDUINO.png" alt="Arduino" />
+            <span><p>Arduino</p></span>
+          </div>
+
+          <div class="tool python">
+            <img src="./assets/PYTHON.png" alt="Python" />
+            <span><p>Python</p></span>
+          </div>
+
+          <div class="tool bootstrap">
+            <img src="./assets/BOOTSTRAP.png" alt="Bootstrap" />
+            <span><p>Bootstrap</p></span>
+          </div>
+        </div>
+      </section>
+
+      <section id="project">
+        <h2>My Projects</h2>
+
+        <div class="project-grid">
+          <!-- Project Card-->
+          <div class="project-card">
+            <img
+              src="./assets/desktop-design-dark.jpg"
+              alt="AI Prompt Generator preview"
+              class="project-image"
+            />
+            <h3>Browser Extension List</h3>
+            <p>A simple UI for managing and showcasing browser extensions.</p>
+            <p class="tech">Tech: HTML, CSS and JavaScript.</p>
+            <div class="project-links">
+              <a href="#">🔗 Live</a>
+              <a href="#">💻 GitHub</a>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <img
+              src="./assets/3-column card.jpg"
+              alt="AI Prompt Generator preview"
+              class="project-image"
+            />
+            <h3>3-Column Preview Card</h3>
+            <p>
+              A responsive layout displaying services using clean, modern
+              design.
+            </p>
+            <p class="tech">Tech: HTML and CSS.</p>
+            <div class="project-links">
+              <a href="#">🔗 Live</a>
+              <a href="#">💻 GitHub</a>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <img
+              src="./assets/success-state.jpg"
+              alt="AI Prompt Generator preview"
+              class="project-image"
+            />
+            <h3>Contact Form</h3>
+            <p>
+              A functional form with client-side validation and success
+              feedback.
+            </p>
+            <p class="tech">Tech: HTML, CSS, JavaScript,</p>
+            <div class="project-links">
+              <a href="#">🔗 Live</a>
+              <a href="#">💻 GitHub</a>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <img
+              src="./assets/loopstudio landing page.jpg"
+              alt="AI Prompt Generator preview"
+              class="project-image"
+            />
+            <h3>Loopstudios Landing Page</h3>
+            <p>
+              A visually appealing landing page with interactive layout and
+              animations.
+            </p>
+            <p class="tech">Tech: HTML, CSS, JavaScript.</p>
+            <div class="project-links">
+              <a href="#">🔗 Live</a>
+              <a href="#">💻 GitHub</a>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <img
+              src="./assets/news homepage.jpg"
+              alt="AI Prompt Generator preview"
+              class="project-image"
+            />
+            <h3>News Homepage</h3>
+            <p>A modern news site layout featuring a responsive design.</p>
+            <p class="tech">Tech: HTML, CSS.</p>
+            <div class="project-links">
+              <a href="#">🔗 Live</a>
+              <a href="#">💻 GitHub</a>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <img
+              src="./assets/Fylo Landing Page.jpg"
+              alt="AI Prompt Generator preview"
+              class="project-image"
+            />
+            <h3>Fylo Landing Page</h3>
+            <p>A sleek landing page for a cloud storage service.</p>
+            <p class="tech">Tech: HTML, CSS</p>
+            <div class="project-links">
+              <a href="#">🔗 Live</a>
+              <a href="#">💻 GitHub</a>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <img
+              src="./assets/recipe.jpg"
+              alt="AI Prompt Generator preview"
+              class="project-image"
+            />
+            <h3>A Recipe Page</h3>
+            <p>A beautifully styled recipe card with ingredients and steps.</p>
+            <p class="tech">Tech: HTML, CSS</p>
+            <div class="project-links">
+              <a href="#">🔗 Live</a>
+              <a href="#">💻 GitHub</a>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <img
+              src="./assets/social link profile.jpg"
+              alt="AI Prompt Generator preview"
+              class="project-image"
+            />
+            <h3>Social Link Profile</h3>
+            <p>A personal profile page linking to social media accounts.</p>
+            <p class="tech">Tech: HTML, CSS.</p>
+            <div class="project-links">
+              <a href="#">🔗 Live</a>
+              <a href="#">💻 GitHub</a>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <img
+              src="./assets/obstacle avoidance robot.jpg"
+              alt="AI Prompt Generator preview"
+              class="project-image"
+            />
+            <h3>Obstacle Avoidance Robot</h3>
+            <p>An Arduino-based robot that detects and avoids obstacles.</p>
+            <p class="tech">Tech: Arduino</p>
+            <div class="project-links">
+              <a href="#">🔗 Live</a>
+              <a href="#">💻 GitHub</a>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <img
+              src="./assets/rock paper scissors.png"
+              alt="AI Prompt Generator preview"
+              class="project-image"
+            />
+            <h3>Rock Paper Scissors</h3>
+            <p>A simple terminal game built with Python for fun interaction.</p>
+            <p class="tech">Tech: Python</p>
+            <div class="project-links">
+              <a href="#">🔗 Live</a>
+              <a href="#">💻 GitHub</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact">
+        <h2>Contact Me</h2>
+        <p class="contact-intro">
+          Got a project idea, feedback, or just want to connect? I'm always
+          happy to chat!
+        </p>
+
+        <form class="contact-form">
+          <input class="name" type="text" name="name" placeholder="Your Name" />
+          <p class="name-err"></p>
+          <input
+            class="email"
+            type="text"
+            name="email"
+            placeholder="Your Email"
+          />
+          <p class="email-err"></p>
+          <textarea
+            class="message"
+            name="message"
+            rows="4"
+            placeholder="Your Message"
+          ></textarea>
+          <p class="message-err"></p>
+          <button class="submit" type="submit">Send Message</button>
+        </form>
+
+        <div class="social-links">
+          <a href="mailto:aysam361@gmail.com" target="_blank"
+            ><i class="bx bxs-envelope"></i
+          ></a>
+          <a href="https://github.com/AyomideFatAI" target="_blank"
+            ><i class="bx bxl-github"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/ayomide-samuel-09a232316/"
+            target="_blank"
+            ><i class="bx bxl-linkedin-square"></i
+          ></a>
+          <a href="https://www.instagram.com/lordsammy_/" target="_blank"
+            ><i class="bx bxl-instagram"></i
+          ></a>
+        </div>
+      </section>
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
