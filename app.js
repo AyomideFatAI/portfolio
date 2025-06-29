@@ -64,6 +64,7 @@ submit.addEventListener("click", (event)=>{
         isValid = false;
     }
     if(isValid){
+
         success_message.style.transform = "translateY(0)";
 
         window.scrollTo({
@@ -74,7 +75,6 @@ submit.addEventListener("click", (event)=>{
         setTimeout(() => {
             success_message.style.transform = "translateY(-200%)";
         }, 3000);
-        }
 
         full_name.value = "";
         email.value = "";
@@ -82,6 +82,9 @@ submit.addEventListener("click", (event)=>{
         name_err.textContent = "";
         email_err.textContent = "";
         message_err.textContent = "";
+        }
+
+        
 
     }
 )
@@ -130,14 +133,7 @@ const moon = document.querySelector(".moon");
 const sun = document.querySelector(".sun");
 const header = document.querySelector("header")
 
-// toggleBtn.onclick = ()=>{
-//     if(getComputedStyle(moon).display == "none"){
-//         body.classList.add("light-mode")
-//         sun.style.display = "none";
-//         moon.style.display = "block"
-//         header.style.background = ""
-//     }
-// }
+
 
 
   const navMenu = document.querySelector('.nav-menu');
